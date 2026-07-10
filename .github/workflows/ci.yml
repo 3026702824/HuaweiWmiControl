@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: windows-2022
 
+    defaults:
+      run:
+        working-directory: HuaweiWmiControl
+
     steps:
       - uses: actions/checkout@v4
 
@@ -18,12 +22,6 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
-
-      - name: 安装 Windows App SDK 运行时
-        run: |
-          curl -fsSLo WindowsAppSDK-installer.exe https://aka.ms/windowsappsdk/1.7/1.7.250310001/windowsappruntimeinstall-x64.exe
-          ./WindowsAppSDK-installer.exe /quiet /norestart
-        shell: pwsh
 
       - name: 还原 NuGet 包
         run: dotnet restore HuaweiWmiControl.slnx
@@ -51,4 +49,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: HuaweiWmiControl-${{ github.ref_name }}
-          path: publish_output/
+          path: HuaweiWmiControl/publish_output/
