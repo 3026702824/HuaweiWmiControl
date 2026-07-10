@@ -2,7 +2,7 @@
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4)](https://dotnet.microsoft.com)
 [![WinUI](https://img.shields.io/badge/WinUI-3.0-0078D7)](https://learn.microsoft.com/windows/apps/winui)
-[![License](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey)](https://creativecommons.org/licenses/by-sa/4.0/)
+[![License](https://img.shields.io/badge/License-GPL_2.0-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/HelloZER0/HuaweiWmiControl/pulls)
 [![.NET Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/HelloZER0/HuaweiWmiControl/actions)
 
@@ -228,7 +228,7 @@ dotnet test HuaweiWmiControl.Tests
 
 ## 开源协议
 
-[CC BY-SA 4.0](LICENSE) © HelloZER0
+[GNU General Public License v2.0](LICENSE) © HelloZER0
 
 ---
 
