@@ -26,6 +26,7 @@
 - [技术栈](#技术栈)
 - [工程结构](#工程结构)
 - [相关项目](#相关项目)
+- [鸣谢](#鸣谢)
 - [主要项目负责人](#主要项目负责人)
 - [参与贡献方式](#参与贡献方式)
     - [贡献人员](#贡献人员)
@@ -60,11 +61,17 @@ Linux 社区早已通过 [`huawei-wmi`](https://github.com/aymanbagabas/Huawei-W
 | 机型 | 系统 | 传感器 | 电池保护 | Fn-Lock | 键盘背光 | 智能充电 | 电源解锁 | 麦克风 LED | 报告人 |
 |------|------|:------:|:--------:|:-------:|:---------:|:--------:|:--------:|:-----------:|--------|
 | MateBook X Pro 2024 (MACH-WX9) | Windows 11 | ✅ | ✅¹ | ✅ | ✅² | ✅ | ✅ | ✅ | @HelloZER0 |
+| MateBook 14 2020 | Windows 11 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | @HelloZER0 |
+| MateBook D 14 (BIOS 1.17) | Windows 11 | ✅³ | ✅³ | ✅³ | ✅³ | ✅³ | ✅³ | ✅³ | @HelloZER0 |
 | MateBook E GO | Windows 11 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | @AceDroidX |
-| 荣耀 MagicBook (BRN-H76) | Windows 11 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | @HelloZER0 |
+| 荣耀 MagicBook (BRN-H76) | Windows 11 | ✅ | ✅ | ✅ | ⚠️⁴ | ❌⁵ | ✅ | ✅ | @HelloZER0 |
+| 荣耀 Hunter V700 | Windows 11 | ➖ | ✅ | ➖ | ➖ | ➖ | ➖ | ➖ | @AceDroidX |
 
 > ¹ 电池保护含 MACH-WX9 兼容路径（关闭前先清零阈值并延时 1 秒）  
-> ² 键盘背光编码为位掩码反转模式（bit 0 = 最亮）
+> ² 键盘背光编码为位掩码反转模式（bit 0 = 最亮）  
+> ³ 需在 BIOS 1.17 下使用 `--new` 参数运行  
+> ⁴ 键盘背光亮度只读，仅可设置熄灭超时  
+> ⁵ 机器固件不支持智能充电功能
 
 ### 如何测试
 
@@ -177,6 +184,14 @@ HuaweiWmiControl/
 
 - [huawei-wmi](https://github.com/aymanbagabas/Huawei-WMI) — 华为笔记本 Linux 内核驱动，本项目的命令编码基础
 - [AceDroidX/HuaweiBatteryControl](https://github.com/AceDroidX/HuaweiBatteryControl) — 基于 C++ 的华为电池控制工具，本项目的逆向分析起点
+
+## 鸣谢
+
+感谢以下 Linux 驱动社区成员在不同机型上的测试验证：
+
+- Daniel Vogelbacher [@cytrinox](https://github.com/cytrinox) 和 Jan Baer [@janbaer](https://github.com/janbaer) — MateBook X (2017)
+- [@nekr0z](https://github.com/nekr0z) — MateBook 13 (2019) `WRT-WX9`，以及其项目 [matebook-applet](https://github.com/nekr0z/matebook-applet)
+- [@wasakakero](https://github.com/wasakakero) — MateBook D 14-AMD `KPL-W0X`
 
 ## 主要项目负责人
 
